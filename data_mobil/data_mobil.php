@@ -4,19 +4,18 @@ require '../header.php';
 ?>
     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
    
-    <a href="./tambah_sewa_mobil.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
+    <a href="./tambah_mobil.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
   
     <br><br>
 <table class="table table-dark table-bordered border-primary" >
 <thead>
     <tr>
         <th>No</th>
-        <th>id_penyewaan</th>
-        <th>Nama penyewa</th>
+        <th>id_mobil</th>
         <th>jenis_mobil</th>
-        <th>durasi</th>
-        <th>jam</th>
-        <th>tanggal</th>
+        <th>ket_mobil</th>
+        <th>harga_mobil</th>
+        <th>gambar_mobil</th>
        
         <th>Aksi</th>  
       
@@ -24,23 +23,22 @@ require '../header.php';
     <tbody>
         <?php
         require '../conn.php';
-        $query = "SELECT * FROM tb_sewa";
+        $query = "SELECT * FROM tb_daftar_mobil";
         $sql = mysqli_query($koneksi,$query);
         $no = 1;
         while ($data = mysqli_fetch_object($sql)) {
         ?>
         <tr>
         <td><?= $no++; ?></td>
-        <td><?= $data->id_penyewaan; ?></td>
-        <td><?= $data->nama_penyewa; ?></td>
+        <td><?= $data->id_mobil; ?></td>
         <td><?= $data->jenis_mobil; ?></td>
-        <td><?= $data->durasi; ?></td>
-        <td><?= $data->jam; ?></td>
-        <td><?= $data->tanggal; ?></td>
+        <td><?= $data->ket_mobil; ?></td>
+        <td><?= $data->harga_mobil; ?></td>
+        <td><?= $data->gambar_mobil; ?></td>
         
-       <td><a href="edit_sewa_mobil.php?url-id=<?=$data->id_penyewaan;?>">
+       <td><a href="edit_mobil.php?url-id=<?=$data->id_mobil;?>">
        <input type="submit" value="Edit" class="btn btn-warning">
-     </a>  <a href="hapus_sewa_mobil.php?id_penyewaan=<?= $data->id_penyewaan;?>">
+     </a>  <a href="hapus_mobil.php?id_mobil=<?= $data->id_mobil;?>">
        <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
        <?php 
        }

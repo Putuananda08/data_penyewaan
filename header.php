@@ -32,13 +32,13 @@
         <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">Kusuma Store </a>
+                    <a href="#">RentCar Kusuma </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="../dashboard/index.php">Dashboard</a>
                 </li>
                 <li>
-                    <a href="#">Daftar Mobil</a>
+                    <a href="../data_mobil/data_mobil.php">Daftar Mobil</a>
                 </li>
                 <li>
                     <a href="../data_sewa/data-sewa-mobil.php">Data Penyewa</a>
