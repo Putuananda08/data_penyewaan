@@ -6,3 +6,4 @@ if(isset($_SESSION['user'])) {
 }else {
     header('location:../web_penyewaan/profil/index.php');
 }
+?>

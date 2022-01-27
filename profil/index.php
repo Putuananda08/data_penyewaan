@@ -63,11 +63,18 @@
       </button>
     </div>
   </div>
-  <div>
-    <h5>
-      RentCar Kusuma adalah salah satu tempat penyewaan mobil terlengkap dan menyediakan mobil dengan kondisi yang baik
+  <!-- <div>
+    <h5 style="text-align: justify; margin-top: 10px;">
+      RentCar Kusuma adalah salah satu tempat penyewaan mobil terlengkap yang menyediakan mobil dengan kondisi yang baik, terpercaya, dan harga sewa yang terjangkau.
+      Rental mobil, sewa mobil, atau agen sewa mobil adalah perusahaan yang menyewakan mobil untuk jangka waktu yang singkat, umumnya mulai dari beberapa jam sampai 
+      beberapa minggu. Sering diatur dengan banyak cabang lokal (yang memungkinkan pengguna untuk mengembalikan kendaraan ke lokasi yang berbeda), dan terutama terletak 
+      di dekat bandara atau daerah kota yang sibuk dan sering dilengkapi dengan situs web yang memungkinkan pemesanan online.Agen penyewaan mobil terutama melayani orang-orang 
+      yang membutuhkan kendaraan sementara, misalnya, mereka yang tidak memiliki mobil sendiri, pelancong yang berada di luar kota, atau pemilik kendaraan yang rusak atau 
+      hancur yang sedang menunggu perbaikan atau kompensasi asuransi . Agen penyewaan mobil juga dapat melayani kebutuhan industri yang bergerak sendiri, dengan menyewa van 
+      atau truk, dan di pasar tertentu, jenis kendaraan lain seperti sepeda motor atau skuter juga dapat ditawarkan. Di samping penyewaan dasar kendaraan, agen penyewaan mobil 
+      biasanya juga menawarkan produk tambahan seperti asuransi, sistem navigasi global positioning system (GPS), sistem hiburan, ponsel, WiFi portabel dan kursi keselamatan anak.
     </h5>
-  </div>
+  </div> -->
   </div>
   <!-- bawah carousel -->
 
@@ -101,7 +108,7 @@
                   <img src="../asset/img/<?= $data->gambar_mobil; ?>" class="card-img-top" style="height: 140px;">
 
                   <div class="card-body">
-                    <h5 class="card-title"><?= $data->jenis_mobil; ?></h5>
+                    <h5 class="card-title" style="text-align: center;"><?= $data->jenis_mobil; ?></h5>
                     <p class="card-text"><?= $data->ket_mobil; ?></p>
                   </div>
                   <div class="card-footer text-muted">
@@ -110,9 +117,6 @@
                         <p>ID : <?= $data->id_mobil; ?></p>
                     
                      
-                  
-
-
                   </div>
                 </div>
               </div>
@@ -127,6 +131,28 @@
     </div>
   </section>
   <!-- contact person -->
+  <footer>
+  <div class="container" style="color: white; text-align: center;"> 
+  <div class="row mb-3 py-2">
+        <div class="col-md-12" style="margin: auto;">
+
+  <div class="card bg-primary">
+  
+   
+  
+  <div class="card-body">
+    <h5 class="card-title">--Kontak Person--</h5>
+    <h5 class="card-title">WhatsApp : 087765108318</h5>
+    <h5 class="card-title">Email : anandapradnyawirawan@gmail.com</h5>
+    <h5 class="card-title">--Alamat--</h5>
+    <h5 class="card-title">JL.Kenari Sweta</h5>
+    
+  </div>
+</div>
+</div>
+</div>
+
+  </footer>
   <!-- end -->
 </body>
 

@@ -15,11 +15,9 @@ require '../conn.php';
 if (isset($_POST['simpan'])){
     $txtnama_penyewa = htmlspecialchars($_POST['txtnama_penyewa']);
     $txtjenis_mobil = htmlspecialchars($_POST['txtjenis_mobil']);
-    $txtdurasi = htmlspecialchars($_POST['txtdurasi']);
     $txttanggal = htmlspecialchars($_POST['txttanggal']);
-    $txtjam = htmlspecialchars($_POST['txtjam']);
 
-    $sql2 = "INSERT INTO tb_sewa VALUES (NULL, '$txtnama_penyewa', '$txtjenis_mobil', '$txtdurasi', '$txttanggal', '$txtjam')";
+    $sql2 = "INSERT INTO tb_sewa VALUES (NULL, '$txtnama_penyewa', '$txtjenis_mobil', '$txttanggal')";
   
     $query2 = mysqli_query($koneksi, $sql2);
 
@@ -60,18 +58,8 @@ if (isset($_POST['simpan'])){
             </div>
 
         <div class="mb-3">
-            <label>Durasi</label>
-            <input type="text" name="txtdurasi" class="form-control" required>
-        </div>
-
-        <div class="mb-3">
             <label>Tanggal</label>
             <input type="text" name="txttanggal" class="form-control" required>
-        </div>
-
-        <div class="mb-3">
-            <label>Jam</label>
-            <input type="text" name="txtjam" class="form-control" required>
         </div>
 
         <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">

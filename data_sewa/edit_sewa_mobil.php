@@ -25,13 +25,11 @@
         if (isset($_POST['simpan'])) {
             $txtnama_penyewa = $_POST['txtnama_penyewa'];
             $txtjenis_mobil = $_POST['txtjenis_mobil'];
-            $txtdurasi = $_POST['txtdurasi'];
             $txttanggal = $_POST['txttanggal'];
-            $txtjam = $_POST['txtjam'];
 
             //update syntax dalam mysql
             $sql = "UPDATE tb_sewa SET
-                         nama_penyewa='$txtnama_penyewa', jenis_mobil='$txtjenis_mobil',durasi='$txtdurasi',tanggal='$txttanggal',jam='$txtjam'
+                         nama_penyewa='$txtnama_penyewa', jenis_mobil='$txtjenis_mobil',tanggal='$txttanggal'
                          WHERE id_penyewaan = '$input_id'";
             $result = mysqli_query($koneksi, $sql);
             //perulangan jika dia berhasil maka ke index dan data diperbarui
@@ -66,19 +64,8 @@
             </div>
 
             <div class="mb-3">
-                <label>Durasi</label>
-                <input type="text" name="txtdurasi" class="form-control" required value="<?= $data->durasi; ?>">
-            </div>
-
-
-            <div class="mb-3">
                 <label>Tanggal</label>
                 <input type="text" name="txttanggal" class="form-control" required value="<?= $data->tanggal; ?>">
-            </div>
-
-            <div class="mb-3">
-                <label>Jam</label>
-                <input type="text" name="txtjam" class="form-control" required value="<?= $data->jam; ?>">
             </div>
 
             <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">

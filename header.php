@@ -12,7 +12,7 @@
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../asset/css/simple-sidebar.css">
 
@@ -47,7 +47,7 @@
                     <a href="#">Services</a>
                 </li> -->
                 <li>
-                    <a href="../logout.php">Logout</a>
+                <a href="../logout.php" onclick="return confirm('yakin ingin logout?')"><span >Logout</span></a>
                 </li>
             </ul>
         </div>
